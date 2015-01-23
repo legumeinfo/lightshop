@@ -46,7 +46,7 @@ USAGE
     d) On the configure page:
 
         - set the 'default theme' to 'Content'.
-        - set 'Show block on specific pages' to 'Only the listed pages'
+        - 'Show block on specific pages' to 'Only the listed pages'
 	- specify pages by entering their paths in the text area, one path per line. E.g.
 	  search/phylotree
 	  search/gene
