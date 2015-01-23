@@ -22,18 +22,18 @@ USAGE
 1. After installing the module you can configure settings by navigating
    to: admin/config/lightshop.
 
-   On the settings page you need specify:
+    On the settings page you need specify:
    
-   1.1. First tab - General Settings.
-   a) The site e-mail for notifications about new orders.
-   b) Specify what node  types  are product.
-   c) Optionally you may specify whether to display the graph with quantity of
-      the product and its price (and which field will contain this value).
+    1.1. First tab - General Settings.
+        a) The site e-mail for notifications about new orders.
+    	b) Specify what node  types  are product.
+    	c) Optionally you may specify whether to display the graph with quantity of
+       	the product and its price (and which field will contain this value).
 
-   1.2. Second tab - Notification Settings.
-   a) Check the appropriate box if notification of the created order must be
-      sent  to the customer also.
-   b) Check the fields whose data you want to be included in the notification.
+    1.2. Second tab - Notification Settings.
+        a) Check the appropriate box if notification of the created order must be
+       	sent  to the customer also.
+    	b) Check the fields whose data you want to be included in the notification.
 
 
 2. Choose the region for display basket block. Navigate to admin/structure/block:
@@ -52,12 +52,11 @@ USAGE
        - hit the 'Save Block' button  
 
 
-3. On permissions page set which roles can use the basket.
-   Navigate to admin/people:
+3. On permissions page set which roles can use the basket. Navigate to admin/people:
 
-   a) Go to the second tab - 'Permissions'.
-   b) Under 'Light Shop' find 'Use basket' and 'Manage orders'.
-   c) Check the appropriate boxes.
+    a) Go to the second tab - 'Permissions'.
+    b) Under 'Light Shop' find 'Use basket' and 'Manage orders'.
+    c) Check the appropriate boxes.
 
 
 NOTE
