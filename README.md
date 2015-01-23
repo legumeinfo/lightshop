@@ -28,7 +28,7 @@ USAGE
      a) The site e-mail for notifications about new orders.
      b) Specify what node  types  are product.
      c) Optionally you may specify whether to display the graph with quantity of
-        the product and its price (and which field will contain this value).
+     the product and its price (and which field will contain this value).
 
    1.2. Second tab - Notification Settings.
      a) Check the appropriate box if notification of the created order must be
@@ -44,6 +44,7 @@ USAGE
     c) 'Light Shop: Basket Content' should now appear under 'Content'.  
        Click the the corresponding 'configure' link.  
     d) On the configure page:
+
         - set the 'default theme' to 'Content'.
         - set 'Show block on specific pages' to 'Only the listed pages'
 	- specify pages by entering their paths in the text area, one path per line. E.g.
