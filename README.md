@@ -44,13 +44,12 @@ USAGE
     c) 'Light Shop: Basket Content' should now appear under 'Content'.  
        Click the the corresponding 'configure' link.  
     d) On the configure page:
-
-        -- set the 'default theme' to 'Content'.
-        -- 'Show block on specific pages' to 'Only the listed pages'
-	-- specify pages by entering their paths in the text area, one path per line. E.g.
-	   search/phylotree
-	   search/gene
-	-- hit the 'Save Block' button  
+       - set the 'default theme' to 'Content'.
+       - 'Show block on specific pages' to 'Only the listed pages'
+       - specify pages by entering their paths in the text area, one path per line. E.g.
+       	 search/phylotree
+	 search/gene
+       - hit the 'Save Block' button  
 
 
 3. On permissions page set which roles can use the basket.
