@@ -20,19 +20,20 @@ No payment methods. Only e-mail notification.
 USAGE
 
 1. After installing the module you can configure settings by navigating
-to: admin/config/lightshop.
+   to: admin/config/lightshop.
 
-On the settings page you need specify:
-1.1. First tab - General Settings.
-  a) The site e-mail for notifications about new orders.
-  b) Specify what node  types  are product.
-  c) Optionally you may specify whether to display the graph with quantity of
-  the product and its price (and which field will contain this value).
+   On the settings page you need specify:
+   
+   1.1. First tab - General Settings.
+     a) The site e-mail for notifications about new orders.
+     b) Specify what node  types  are product.
+     c) Optionally you may specify whether to display the graph with quantity of
+        the product and its price (and which field will contain this value).
 
-1.2. Second tab - Notification Settings.
-  a) Check the appropriate box if notification of the created order must be
-  sent  to the customer also.
-  b) Check the fields whose data you want to be included in the notification.
+   1.2. Second tab - Notification Settings.
+     a) Check the appropriate box if notification of the created order must be
+        sent  to the customer also.
+     b) Check the fields whose data you want to be included in the notification.
 
 
 2. Choose the region for display basket block. Navigate to admin/structure/block:
