@@ -163,7 +163,14 @@ function lightshop_preprocess_page(&$vars) {
 /**
  * Create a «add to basket» link for display in the node body.
  */
-function lightshop_add2basket_link($nid) {
+function lightshop_add2basket_link($nid, $type) {
+  if ($type == "gene") {
+    $_SESSION['block_view_text'] = t("Your Basket</br><small>(Use this to get sequences or information for a list of genes. Add by 'Add to Basket' in the table below.)</small>"); 
+  } else {
+    $_SESSION['block_view_text'] = t("Your Basket");
+  }
+
+
   $build = array();
   if (_lightshop_in_basket($nid)) {
     $build['add2basket_link'] = array(
@@ -532,7 +539,7 @@ function lightshop_block_view() {
     return;
   }
   $block = array();
-  $block['subject'] = t('Your Basket');
+  $block['subject'] = $_SESSION['block_view_text'] ? $_SESSION['block_view_text'] : t("Your Basket");
   $block['content'] = lightshop_block_content();
   return $block;
 }

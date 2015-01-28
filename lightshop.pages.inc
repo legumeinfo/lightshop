@@ -78,7 +78,7 @@ SQL;
     ajax_deliver($output);
   }
   else {
-    drupal_goto();
+      //drupal_goto();
   }
 }
 
@@ -479,7 +479,7 @@ function _lightshop_clear_confirm($form, &$form_state) {
 function _lightshop_clear_confirm_submit($form, &$form_state) {
   unset($_SESSION['basket']);
   drupal_set_message(t('Your basket is cleared'));
-  drupal_goto('basket');
+  drupal_goto($_SESSION['view_page']);
 }
 
 /**
