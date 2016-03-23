@@ -166,7 +166,8 @@ function lightshop_preprocess_page(&$vars) {
 function lightshop_add2basket_link($nid, $type) {
   $_SESSION['feat_type'] = $type;
   if ($type == "gene") {
-    $_SESSION['block_view_text'] = t("Your Basket</br><small>(Use this to get sequences or information for a list of genes. Add by 'Add to Basket' in the table below.)</small>"); 
+    //$_SESSION['block_view_text'] = t("Your Basket</br><small>(Use this to get sequences or information for a list of genes. Add by 'Add to Basket' in the table below.)</small>"); 
+    $_SESSION['block_view_text'] = t("<h1>Search for genes and build a list</h1><small>(Search for genes and/or build a list (collection/basket) of gene models based on their ID, description or membership in a gene family or protein domain annotation. The list can be used later for further analysis such as sequence retrieval and checking for transcripts or other such features. Just click the 'Add to Basket' button in the right most column to include it in the list/basket.)</small>"); 
   } else {
     $_SESSION['block_view_text'] = t("Your Basket");
   }
