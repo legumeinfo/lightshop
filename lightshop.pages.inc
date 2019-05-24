@@ -72,7 +72,7 @@ SQL;
   if ($type == 'ajax') {
     $basket_block = lightshop_block_content();
     $commands = array();
-    $commands[] = ajax_command_replace(NULL, lightshop_add2basket_link($node->nid));
+    $commands[] = ajax_command_replace(NULL, lightshop_add2basket_link($node->nid, $node->type));
     $commands[] = ajax_command_replace('#lightshop-ajax-block-content', render($basket_block));
     $output = array('#type' => 'ajax', '#commands' => $commands);
     ajax_deliver($output);
