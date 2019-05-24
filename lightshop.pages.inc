@@ -95,7 +95,7 @@ function generate_fasta($sql, $regex) {
     }
 
     //data needs to be print as a plain text:
-    drupal_add_http_header('Content-Type: text/plain');
+    drupal_add_http_header('Content-Type','text/plain');
     print $data;
     // drupal_exit prompts a save dialog:
     drupal_exit();
