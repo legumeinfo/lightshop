@@ -431,6 +431,22 @@ function lightshop_polypeptides() {
                     and f2.type_id = cvt2.cvterm_id
                     and cvt2.name ='polypeptide'
                     and chf.nid = :nid
+              order by f2.seqlen desc
+	      --this would be better in some sense than the easy order by approach
+          --above, since it would guarantee that the isoform return from 
+          --a polypeptide request would not differ from that returned for 
+          --mRNA. Unfortunately, it is less robust, mainly due to the fact that
+          --genes not assigned to families won't have one of these properties
+          --assigned. better might be to just use the primary* files to set 
+          --a more generic property- perhaps someday. another alternative might
+          --to get them from the datastore files instead of the db.
+	      --and exists (
+             --select * from featureprop where feature_id=g.gene_id
+             --and (value=f2.uniquename or value=f2.name)
+	         --and type_id=
+                   --(select cvterm_id from cvterm 
+                      --where name = 'family representative')
+              --)
 SQL;
     $regex = "/([a-zA-Z]{80})/";
     generate_fasta($sql, $regex);
@@ -451,6 +467,16 @@ function lightshop_mrna($ajax = FALSE) {
                   and f.type_id = cvt.cvterm_id
                   and cvt.name = 'mRNA'
             and chf.nid = :nid
+            order by f.seqlen desc
+            --see notes for polypeptide as to pros and cons of order by 
+            --vs this commented-out code
+            --and exists (
+               --select * from featureprop where feature_id=g.gene_id
+               --and (value=f.uniquename or value=f.name)
+               --and type_id=
+                     --(select cvterm_id from cvterm 
+                        --where name = 'family representative')
+               --)
 SQL;
 
     $regex = "/([acgtACGT]{80})/";
